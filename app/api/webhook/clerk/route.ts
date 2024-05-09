@@ -66,6 +66,7 @@ export async function POST(req: Request) {
             photo: image_url,
         }
 
+        // @ts-ignore
         const newUser = await createUser(user);
 
         if(newUser) {
@@ -89,6 +90,7 @@ export async function POST(req: Request) {
             photo: image_url,
         }
 
+        // @ts-ignore
         const updatedUser = await updateUser(id, user)
 
         return NextResponse.json({ message: 'OK', user: updatedUser })
